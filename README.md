@@ -24,6 +24,8 @@ You can run the script with `lastlogcsv` or `python3 -m lastlogcsv`
 ```txt
 usage: lastlogcsv [-h] -i INPUT [-o OUTPUT] [-s {L,A}] [-e]
 
+Converter from /var/log/lastlog to csv file.
+
 options:
   -h, --help            show this help message and exit
   -i INPUT, --input INPUT
