@@ -1,4 +1,4 @@
-"""Unit tests for lastlog.parser."""
+"""Unit tests for lastlog.__main__."""
 import io
 from contextlib import redirect_stdout
 from unittest import TestCase

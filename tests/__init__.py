@@ -1,1 +1,1 @@
-"""Init tests"""
+"""Main module for testing."""

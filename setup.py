@@ -52,7 +52,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "lastlogcsv=lastlogcsv.__main__:main",
+            "lastlogcsv=lastlogcsv.__main__:entrypoint",
         ]
     },
     zip_safe=True

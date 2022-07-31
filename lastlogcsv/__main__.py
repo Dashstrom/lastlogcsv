@@ -1,4 +1,4 @@
-"""Main lastlog"""
+"""Entry point when the module is launched directly."""
 import argparse
 import os
 import sys
@@ -51,5 +51,9 @@ def main(argv: List[str]) -> int:
     return 0
 
 
-if __name__ == "__main__":
+def entrypoint() -> None:
     sys.exit(main(sys.argv))
+
+
+if __name__ == "__main__":
+    entrypoint()

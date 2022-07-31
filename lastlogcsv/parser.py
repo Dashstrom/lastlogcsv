@@ -1,4 +1,4 @@
-"""Parser"""
+"""Parser using streams."""
 import csv
 import struct
 from functools import partial
