@@ -1,0 +1,5 @@
+future>=0.18.2
+pip>=18.1
+setuptools>=40.6.2
+typing-extensions>=4.1.1
+wheel>=0.37.1
