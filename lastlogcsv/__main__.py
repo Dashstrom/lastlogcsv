@@ -11,7 +11,9 @@ from .parser import (DEFAULT_LASTLOG, DEFAULT_STYLE, STYLES, StyleKeyType,
 
 def main(argv: List[str]) -> int:
     """Main method called with by module"""
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description="Converter from /var/log/lastlog to csv file."
+    )
     if os.name == 'nt':
         input_opts: Dict[str, Any] = dict(required=True)
     else:

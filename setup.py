@@ -26,7 +26,7 @@ setup(
     url="https://github.com/Dashstrom/lastlogcsv",
     license="GPL-3.0 License",
     packages=find_packages(exclude=("tests",)),
-    description="Parser for /var/log/lastlog files.",
+    description="Converter from /var/log/lastlog to csv file.",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
     python_requires=">=3.6.0",
@@ -43,7 +43,7 @@ setup(
         "Operating System :: POSIX :: Linux"
     ],
     test_suite="tests",
-    keywords=["lastlog", "parser", "script", "forensic", "csv"],
+    keywords=["lastlog", "parser", "script", "forensics", "csv"],
     install_requires=read("requirements.txt").split("\n"),
     platforms="any",
     include_package_data=True,

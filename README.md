@@ -3,18 +3,18 @@
 ![Tests result](https://github.com/Dashstrom/lastlogcsv/actions/workflows/tests.yml/badge.svg)
 ![Build result](https://github.com/Dashstrom/lastlogcsv/actions/workflows/publish.yml/badge.svg)
 
-This project aims to transform the lastlog files located in /var/log into a CSV file or print in into stdout.
+Converter from /var/log/lastlog to csv file.
 
 ## Install from github
 
 ```sh
-pip install git+https://github.com/Dashstrom/lastlogcsv
+pip3 install git+https://github.com/Dashstrom/lastlogcsv
 ```
 
 ## Install from PyPI
 
 ```sh
-pip install lastlogcsv
+pip3 install lastlogcsv
 ```
 
 ## Usage
