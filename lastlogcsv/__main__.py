@@ -52,7 +52,7 @@ def main(argv: List[str]) -> int:
 
 
 def entrypoint() -> None:
-    sys.exit(main(sys.argv))
+    sys.exit(main(sys.argv[1:]))
 
 
 if __name__ == "__main__":
