@@ -14,7 +14,7 @@ def version():
     match = re.search(r"__version__\s+=\s+[\"'](.+)[\"']",
                       read("lastlogcsv/__init__.py"))
     if match is not None:
-        return match.group(1)  # type: ignore
+        return match.group(1)
     return "0.0.1"
 
 
@@ -26,7 +26,7 @@ setup(
     url="https://github.com/Dashstrom/lastlogcsv",
     license="GPL-3.0 License",
     packages=find_packages(exclude=("tests",)),
-    description="Parser for /var/log/lastlog file.",
+    description="Parser for /var/log/lastlog files.",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
     python_requires=">=3.6.0",
