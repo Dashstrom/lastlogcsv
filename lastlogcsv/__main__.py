@@ -26,7 +26,7 @@ def main(argv: List[str]) -> int:
     parser.add_argument("-s", "--struct", default=DEFAULT_STYLE,
                         choices=STYLES.keys(),
                         help="'A' for actual struct, 'L' for legacy")
-    parser.add_argument("-e", "--error", type=bool,
+    parser.add_argument("-e", "--error", action="store_true",
                         help="display complete error")
     args = parser.parse_args(argv)
     lastlog_path: str = args.input
