@@ -5,16 +5,16 @@
 
 Converter from /var/log/lastlog to csv file.
 
-## Install from github
-
-```sh
-pip3 install git+https://github.com/Dashstrom/lastlogcsv
-```
-
 ## Install from PyPI
 
 ```sh
 pip3 install lastlogcsv
+```
+
+## Install from Github
+
+```sh
+pip3 install git+https://github.com/Dashstrom/lastlogcsv
 ```
 
 ## Usage
