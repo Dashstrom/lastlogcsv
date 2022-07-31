@@ -12,4 +12,4 @@ class TestParser(TestCase):
         out = io.StringIO()
         with open(LASTLOG_PATH, "rb") as lastlog_file:
             lastlog_to_csv(lastlog_file, out)
-        self.assertEqual(out.getvalue(), LASTLOG_OUT)
+        self.assertEqual(out.getvalue(), LASTLOG_OUT, "Output mismatch")

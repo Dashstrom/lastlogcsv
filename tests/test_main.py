@@ -12,5 +12,6 @@ class TestMain(TestCase):
     def test_main(self) -> None:
         out = io.StringIO()
         with redirect_stdout(out):
-            main(["-i", LASTLOG_PATH])
-        self.assertEqual(out.getvalue(), LASTLOG_OUT)
+            exitcode = main(["-i", LASTLOG_PATH])
+        self.assertEqual(out.getvalue(), LASTLOG_OUT, "Output mismatch")
+        self.assertEqual(0, exitcode, "Command return non-zero exit code")
