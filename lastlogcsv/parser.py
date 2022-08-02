@@ -46,5 +46,5 @@ def lastlog_to_csv(
             host: bytes
             timestamp, line, host = structure.unpack(block)
             writer.writerow((timestamp,
-                            line.rstrip(b"\x00").decode("utf8"),
-                            host.rstrip(b"\x00").decode("utf8")))
+                             line.rstrip(b"\x00").decode("utf8"),
+                             host.rstrip(b"\x00").decode("utf8")))
