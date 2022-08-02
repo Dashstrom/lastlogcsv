@@ -32,3 +32,5 @@ mypy.ini
 # test caches
 .tox/
 .pytest_cache/
+.coverage
+htmlcov

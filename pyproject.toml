@@ -42,10 +42,13 @@ legacy_tox_ini = """
 [tox]
 envlist = linting,py36,py37,py38,py39,py310
 isolated_build = true
+paths = tests
 [testenv]
 deps = -r requirements_dev.txt
 commands =
-    pytest
+    coverage erase
+    coverage run --source=lastlogcsv -m pytest
+    coverage report --fail-under 75
 
 [testenv:linting]
 deps = -r requirements_dev.txt
@@ -53,6 +56,7 @@ commands =
     pylint --fail-under=9.0 --rcfile pyproject.toml lastlogcsv
     mypy lastlogcsv
     flake8
+    isort -c --diff .
 """
 
 
