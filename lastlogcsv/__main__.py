@@ -1,4 +1,4 @@
-"""Entry point when the module is launched directly."""
+"""Entry point when the module is launched with `-m lastlogcsv`."""
 import argparse
 import os
 import sys
@@ -52,6 +52,7 @@ def main(argv: List[str]) -> int:
 
 
 def entrypoint() -> None:
+    """Entrypoint in script mode."""
     sys.exit(main(sys.argv[1:]))
 
 
