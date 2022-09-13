@@ -48,7 +48,7 @@ setup(
     platforms="any",
     include_package_data=True,
     package_data={
-        "mandelia": ["py.typed"],
+        "lastlogcsv": ["py.typed"],
     },
     entry_points={
         "console_scripts": [
