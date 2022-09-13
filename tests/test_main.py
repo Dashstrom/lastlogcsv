@@ -4,7 +4,7 @@ import sys
 from contextlib import redirect_stdout
 from typing import Any
 from unittest import TestCase, skipIf
-from unittest.mock import mock_open, patch
+from unittest.mock import MagicMock, mock_open, patch
 
 from lastlogcsv.__main__ import main
 from tests.utils import LASTLOG_DATA, LASTLOG_OUT, LASTLOG_PATH
@@ -23,7 +23,7 @@ class TestMain(TestCase):
     @patch("builtins.open",
            side_effect=[mock_open(read_data=LASTLOG_DATA).return_value,
                         mock_open().return_value])
-    def test_main_output(self, mo: Any) -> None:
+    def test_main_output(self, mo: MagicMock) -> None:  # type: ignore
         out = io.StringIO()
         with redirect_stdout(out):
             exitcode = main(["-i", LASTLOG_PATH, "-o", "fakefile", "-e"])
