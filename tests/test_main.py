@@ -2,7 +2,6 @@
 import io
 import sys
 from contextlib import redirect_stdout
-from typing import Any
 from unittest import TestCase, skipIf
 from unittest.mock import MagicMock, mock_open, patch
 
