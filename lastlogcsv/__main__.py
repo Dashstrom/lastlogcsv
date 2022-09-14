@@ -12,7 +12,12 @@ from .parser import (DEFAULT_LASTLOG, DEFAULT_STYLE, STYLES, StyleKeyType,
 def main(argv: List[str]) -> int:
     """Main method called with by module"""
     parser = argparse.ArgumentParser(
-        description="Converter from /var/log/lastlog to csv file."
+        description=(
+            "Converter file from /var/log/lastlog to csv file.\n\n"
+            "The output format is `uid,timestamp,line,host`.\n"
+            "Exemple : `1000,1582898351,pts/0,192.168.56.1`"
+        ),
+        formatter_class=argparse.RawTextHelpFormatter
     )
     if os.name == 'nt':
         input_opts: Dict[str, Any] = dict(required=True)

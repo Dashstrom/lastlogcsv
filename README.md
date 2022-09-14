@@ -1,7 +1,7 @@
 # Lastlogcsv
 
-![Tests result](https://github.com/Dashstrom/lastlogcsv/actions/workflows/tests.yml/badge.svg)
-![Build result](https://github.com/Dashstrom/lastlogcsv/actions/workflows/publish.yml/badge.svg)
+[![Tests result](https://github.com/Dashstrom/lastlogcsv/actions/workflows/tests.yml/badge.svg)](https://github.com/Dashstrom/lastlogcsv/actions/workflows/tests.yml)
+[![Build result](https://github.com/Dashstrom/lastlogcsv/actions/workflows/publish.yml/badge.svg)](https://github.com/Dashstrom/lastlogcsv/actions/workflows/publish.yml)
 
 Converter from /var/log/lastlog to csv file.
 
@@ -22,9 +22,12 @@ pip3 install git+https://github.com/Dashstrom/lastlogcsv
 You can run the script with `lastlogcsv` or `python3 -m lastlogcsv`
 
 ```txt
-usage: lastlogcsv [-h] -i INPUT [-o OUTPUT] [-s {L,A}] [-e]
+usage: lastlogcsv [-h] [-i INPUT] [-o OUTPUT] [-s {L,A}] [-e]
 
-Converter from /var/log/lastlog to csv file.
+Converter file from /var/log/lastlog to csv file.
+
+The output format is `uid,timestamp,tine,host`.
+Exemple : `1000,1582898351,pts/0,192.168.56.1`
 
 options:
   -h, --help            show this help message and exit

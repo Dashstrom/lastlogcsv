@@ -35,16 +35,22 @@ def lastlog_to_csv(
     csv_out: TextWritable,
     style: StyleKeyType = DEFAULT_STYLE
 ) -> None:
-    """Convert an lastlog input stream to an csv output stream."""
+    """
+    Convert an lastlog input stream to an csv output stream.
+
+    The output format is `uid,timestamp,line,host`
+    """
     fmt = STYLES[style]
     structure = struct.Struct(fmt)
     writer = csv.writer(csv_out, lineterminator="\n")
-    for block in iter(partial(lastlog_in.read, structure.size), b""):
+    read_next_block = partial(lastlog_in.read, structure.size)
+    for uid, block in enumerate(iter(read_next_block, b"")):
         if any(block):
             timestamp: int
             line: bytes
             host: bytes
             timestamp, line, host = structure.unpack(block)
-            writer.writerow((timestamp,
+            writer.writerow((uid,
+                             timestamp,
                              line.rstrip(b"\x00").decode("utf8"),
                              host.rstrip(b"\x00").decode("utf8")))
